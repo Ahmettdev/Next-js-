@@ -16,6 +16,4 @@ export default async function ProductsPage() {
             ))}
         </div>
     );
-
-
 }

@@ -1,5 +1,5 @@
 export const dynamic = "force-dynamic";
- function AboutPage() {
+function AboutPage() {
   return (
     <div>
         <h1>About Page</h1>

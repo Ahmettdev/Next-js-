@@ -27,24 +27,26 @@ export async function AnalyticsCards() {
     },
   ];
 
-return (
+  return (
+   
 
- <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-  {
-    stats.map((stat, index) => 
-      <div key={index} className={`bg-gradient-to-r ${stat.color} p-6 rounded-lg shadow-md`}>
-        <h3 className="text-lg font-semibold text-white">{stat.title}</h3> 
 
-        <p className="text-2xl font-bold text-white mt-2">{stat.value}</p>
-        <p className={`mt-1 text-sm font-medium ${stat.isPositive ? "text-green-400" : "text-red-400"}`}>
-          {stat.change}   
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {
+          stats.map((stat, index) =>
+            <div key={index} className={`bg-gradient-to-r ${stat.color} p-6 rounded-lg shadow-md`}>
+              <h3 className="text-lg font-semibold text-white">{stat.title}</h3>
 
-        </p>
+              <p className="text-2xl font-bold text-white mt-2">{stat.value}</p>
+              <p className={`mt-1 text-sm font-medium ${stat.isPositive ? "text-green-400" : "text-red-400"}`}>
+                {stat.change}
+
+              </p>
+            </div>
+          )
+        }
       </div>
-    )
-  }
-</div>
 
-)
+  )
 }
 
